@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TechCorp</title>
+
+    <!-- FUENTE -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilo/estilo.css">
+
+    <!-- ICONOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- NAVBAR FIJO -->
+<nav id="navbar">
+    <div class="logo">TechCorp</div>
+
+    <ul>
+        <li><a href="#inicio"><i class="fas fa-home"></i>Inicio</a></li>
+
+        <li>
+            <a href="#servicios"><i class="fas fa-laptop-code"></i>Servicios</a>
+            <ul>
+                <li><a href="#servicios">Desarrollo Web</a></li>
+                <li><a href="#">Apps Móviles</a></li>
+                <li><a href="#">Cloud</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#"><i class="fas fa-box"></i>Productos</a></li>
+        <li><a href="#"><i class="fas fa-users"></i>Nosotros</a></li>
+        <li><a href="#"><i class="fas fa-envelope"></i>Contacto</a></li>
+    </ul>
+</nav>
+
+<!-- INICIO -->
+<section class="inicio animar" id="inicio">
+    <div class="contenido-inicio">
+        <h1>Soluciones Tecnológicas Innovadoras</h1>
+        <p>Desarrollamos software moderno y soluciones digitales para tu negocio.</p>
+        <a href="#servicios" class="btn">Conocer más</a>
+    </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="servicios animar" id="servicios">
+    <h2>Desarrollo Web</h2>
+    <p class="descripcion">Creamos soluciones web modernas y seguras.</p>
+
+    <div class="contenedor-servicios">
+
+        <div class="card">
+            <i class="fas fa-code"></i>
+            <h3>Frontend</h3>
+            <p>Interfaces modernas.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-server"></i>
+            <h3>Backend</h3>
+            <p>APIs y servidores.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Responsive</h3>
+            <p>Adaptado a todos los dispositivos.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- SCRIPT -->
+<script>
+    // Navbar efecto scroll
+    window.addEventListener("scroll", function() {
+        const nav = document.getElementById("navbar");
+        nav.classList.toggle("scrolled", window.scrollY > 50);
+    });
+
+    // Animación al aparecer
+    const elementos = document.querySelectorAll(".animar");
+
+    function mostrarElementos() {
+        const trigger = window.innerHeight * 0.8;
+
+        elementos.forEach(el => {
+            const top = el.getBoundingClientRect().top;
+            if (top < trigger) {
+                el.classList.add("visible");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", mostrarElementos);
+    mostrarElementos();
+</script>
+
+</body>
+</html>
