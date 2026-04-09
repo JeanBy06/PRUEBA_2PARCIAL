@@ -4,19 +4,15 @@
     <meta charset="UTF-8">
     <title>TechCorp</title>
 
-    <!-- FUENTE -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="estilo/estilo.css">
 
-    <!-- ICONOS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
-<!-- NAVBAR FIJO -->
 <nav id="navbar">
     <div class="logo">TechCorp</div>
 
@@ -38,7 +34,6 @@
     </ul>
 </nav>
 
-<!-- INICIO -->
 <section class="inicio animar" id="inicio">
     <div class="contenido-inicio">
         <h1>Soluciones Tecnológicas Innovadoras</h1>
@@ -47,7 +42,6 @@
     </div>
 </section>
 
-<!-- SERVICIOS -->
 <section class="servicios animar" id="servicios">
     <h2>Desarrollo Web</h2>
     <p class="descripcion">Creamos soluciones web modernas y seguras.</p>
@@ -75,15 +69,12 @@
     </div>
 </section>
 
-<!-- SCRIPT -->
 <script>
-    // Navbar efecto scroll
     window.addEventListener("scroll", function() {
         const nav = document.getElementById("navbar");
         nav.classList.toggle("scrolled", window.scrollY > 50);
     });
 
-    // Animación al aparecer
     const elementos = document.querySelectorAll(".animar");
 
     function mostrarElementos() {
